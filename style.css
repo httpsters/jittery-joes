@@ -67,6 +67,9 @@ div.option-content {
   max-width: 800px;
   margin: 0 auto;
 }
+div.coffee-item {
+  border-top: 1px solid black;
+}
 footer {
   border-top: 1px solid black;
   padding: 30px;
