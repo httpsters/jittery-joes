@@ -13,42 +13,27 @@
         </div>
       </header>
 
-      <!-- review form -->
-      <div class="review-form-wrapper row">
-        <form name="ratingForm" ng-submit="addNewRating()">
-          <div class="review-item form-group col-md-4">
-            <label for="review-item-field">Choose a blend</label>
-            <select ng-model="review.item" ng-options="coffee for coffee in coffees" name="review-item-field" id="review-item-field" class="review-item-field form-control">
-              <option value="World Tour Blend">World Tour Blend</option>
-            </select>
-          </div>
-          <div class="review-rating form-group col-md-8">
-            <label>Blend rating</label>
-            <br/>
-            <label ng-repeat="num in [1, 2, 3, 4, 5]">
-              <input ng-model="review.rating" type="radio" id="rating-{{ num }}" name="review-rating-field" value="{{ num }}">
-              {{ num }}
-            </label>
-          </div>
-          <div class="review-comment form-group col-md-12">
-            <label for="review-comment-field">Comment</label>
-            <textarea ng-model="review.comment" rows="3" id="review-comment-field" class="review-comment-field form-control" name="review-comment-field">
-            </textarea>
-          </div>
-          <div class="submit form-group col-md-12">
-            <button type="submit" class="btn btn-default pull-right">Send</button>
-          </div>
-        </form>
+      <div class="coffee-option">
+        <div class="option-content">
+          <h2>Coffee lovers</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
       </div>
 
-      <div class="row results-wrapper"> <!-- list reviews -->
-        <div class="col-md-6 review"i ng-repeat="review in reviews">
-          <h4 class="review-item">{{ review.item }}</h4>
-          <div class="review-rating">{{ review.rating }}/5</div>
-          <div class="review-comment">{{ review.comment }}</div>
-          <div class="review-date pull-right">{{ review.date.toLocaleString() }}</div>
+      <div class="coffee-option">
+        <div class=option-content>
+          <h2>Adventurers</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
-      </div> <!-- close list reviews -->
+      </div>
+
+      <div class="coffee-option">
+        <div class=option-content>
+          <h2>Today's Deals</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+
 
       <!-- footer -->
       <footer class="row">
@@ -91,7 +76,7 @@
           </div>
         </div>
       </footer>
-      
+
     </div> <!-- close main wrapper -->
 
     <!-- load things -->

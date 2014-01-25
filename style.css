@@ -30,7 +30,6 @@ header .slogan {
 
 .main-wrapper {
   margin: auto;
-  max-width: 800px;
   width: 100%;
 }
 
@@ -53,4 +52,22 @@ footer .logo img {
 }
 footer .logo .slogan {
   font-size: 18px;
+}
+
+
+/******************* PROTO **************/
+header {
+  padding: 30px;
+}
+div.coffee-option {
+  border-top: 1px solid black;
+  padding: 30px;
+}
+div.option-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+footer {
+  border-top: 1px solid black;
+  padding: 30px;
 }
