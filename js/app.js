@@ -119,4 +119,13 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
         return filtered;
     };
 
+    $scope.addReview = function(coffee) {
+        var myReview = $scope.myReview;
+        console.log('my review', myReview);
+
+        $('.reviewForm').trigger('openModal');
+    };
+
 });
+
+$('.reviewForm').easyModal();

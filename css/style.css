@@ -77,7 +77,7 @@ div.coffee-option {
 }
 div.option-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 footer {
   border-top: 1px solid black;
@@ -93,4 +93,37 @@ footer {
 .category_block .categ_desc_block {
   display: inline-block;
   width: 570px;
+}
+
+.option-content .item_title_block {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.option-content .name {
+  float: left;
+  width: 220px;
+}
+.option-content .item_desc {
+  float: left;
+  width: 580px;
+}
+
+.review_user {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.review_user img {
+  width: 50px;
+  float: left;
+}
+
+.review_user_name {
+  font-size: 18px;
+  margin: 10px 0 0 65px;
+}
+
+div.reviewForm {
+  background: white
 }
