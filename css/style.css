@@ -1,10 +1,3 @@
-body {
-  padding-top: 70px;
-  color: #6b3515;
-  font-family: 'Open Sans', sans-serif;
-  font-size:16px;
-  margin: auto;
-}
 
 h1{
   color: #6B3515;
@@ -16,6 +9,28 @@ h2 {
   font-family: 'Russo One', sans-serif;
   font-size: 32px;
 }
+
+h3 {
+  color:#6b3515; 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h4 {
+  color:#6b3515; 
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600; 
+  font-size: 19px;
+}
+
+body {
+  padding-top: 70px;
+  color: #6b3515;
+  font-family: 'Open Sans', sans-serif;
+  font-size:16px;
+  margin: auto;
+}
+
 
 
 header {
