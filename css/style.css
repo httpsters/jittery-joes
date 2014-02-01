@@ -16,6 +16,15 @@ h2 {
   font-family: 'Russo', sans-serif;
   font-size:32px;
 }
+h3,
+h4,
+h5,
+h6 {
+  color: #6b3515;
+  font-family: 'Open sans', sans-serif;
+  font-size: 16px;
+  margin: auto;
+}
 
 h1 {
   color: #6b3515;
@@ -30,7 +39,6 @@ h2 {
   font-size: 32px;
   margin: auto;
 }
-
 
 header {
   text-align: center;
