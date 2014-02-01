@@ -113,8 +113,12 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
     
     $scope.coffees = [
         'Columbian',
-        'Fordnation Blend',
-        'Coffee Lover Blend'
+         'Mocca-Java',
+        'Reggae Blend',
+        'Ruth Roast',
+        'Toronto Blend',
+        'Tropic of Coffee',
+        'Fordnation Blend'
     ]
 
     $http.jsonp('http://jitteryjoes.myplanetfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
