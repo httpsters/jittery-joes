@@ -46,7 +46,9 @@
               <div class="review_user_name">Kate</div>
             </div> -->
             <div class='review' ng-repeat="review in getReviews(coffee)">
-              {{ review.rating }}/5 : {{ review.comment }}
+              <img src="image/coffe_cups_review.jpg" />
+              <!-- <span class="review_stars">{{ review.rating }}/5</span> -->
+               <span>{{ review.comment }}</span>
             </div>
             <a ng-click="addReview(coffee)">Add review</a>
             <div class='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
