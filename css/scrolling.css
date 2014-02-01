@@ -15,9 +15,6 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .container a:link, a:visited {
 	color: #453524;
 }
-.container a:hover {
-	color: #47a3da;
-}
 
 .container > header {
 	width: 90%;
