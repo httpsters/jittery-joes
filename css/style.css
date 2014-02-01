@@ -1,5 +1,4 @@
 body {
-<<<<<<< HEAD
   padding-top: 70px;
   color: #6b3515;
   font-family: 'Open Sans', sans-serif;
@@ -17,16 +16,6 @@ h2 {
   font-family: 'Russo', sans-serif;
   font-size:32px;
 }
-h3,
-h4,
-h5,
-h6,
-=======
-  color: #6b3515;
-  font-family: 'Open sans', sans-serif;
-  font-size: 16px;
-  margin: auto;
-}
 
 h1 {
   color: #6b3515;
@@ -41,8 +30,6 @@ h2 {
   font-size: 32px;
   margin: auto;
 }
->>>>>>> a0167312eed12da1e9c2cf4e43802895f85551b7
-
 
 
 header {
@@ -50,7 +37,7 @@ header {
 }
 
 header img {
-	width: 100px;
+	width: 150px;
   border-radius: 75px;
   -moz-border-radius: 75px;
   -webkit-border-radius: 75px;
