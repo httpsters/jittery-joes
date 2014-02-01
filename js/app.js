@@ -134,7 +134,7 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
             return review.item === blendName;
         });
 
-        return filtered;
+        return filtered.slice(0,5);
     };
 
     $scope.addReview = function(coffee) {
