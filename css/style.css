@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
   padding-top: 70px;
   color: #6b3515;
   font-family: 'Open Sans', sans-serif;
@@ -20,6 +21,29 @@ h3,
 h4,
 h5,
 h6,
+=======
+  color: #6b3515;
+  font-family: 'Open sans', sans-serif;
+  font-size: 16px;
+  margin: auto;
+}
+
+h1 {
+  color: #6b3515;
+  font-family: 'Russo', sans-serif;
+  font-size: 64px;
+  margin: auto;
+}
+
+h2 {
+  color: #c98f2b;
+  font-family: 'Russo', sans-serif;
+  font-size: 32px;
+  margin: auto;
+}
+>>>>>>> a0167312eed12da1e9c2cf4e43802895f85551b7
+
+
 
 header {
   text-align: center;
@@ -27,6 +51,9 @@ header {
 
 header img {
 	width: 150px;
+  border-radius: 75px;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
 }
 header h1 {
 	font-size: 58px;
@@ -36,7 +63,7 @@ header .slogan {
 }
 
 .nav-inner { text-align: center; }
-.container-fluid { background-color: #fff; }
+.container-fluid { background-color: #e9cf91; }
 .nav-center { 
   max-height: 0px;
   overflow: visible;
@@ -132,4 +159,9 @@ footer {
 
 div.reviewForm {
   background: white
+}
+
+.mid_footer_content {
+  width: 1070px;
+  margin: 0 auto;
 }

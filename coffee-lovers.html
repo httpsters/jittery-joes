@@ -4,18 +4,32 @@
     <title>Jittery Joe's</title>
   </head>
   <body ng-controller="CoffeeLoversCtrl">
-    <div class="main-wrapper">
-      <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="adventurers.html">Adventurers</a></li>
-          <li><a href="deals.html">Today's Deals</a></li>
-        </ul>
+  <header class="row">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="nav-inner">
+                <div class="nav-center">
+                  <img src="images/nav-logo.png" />
+                </div>
+              </div>
+              <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Jittery Joe's</a>
+              
 
-        <div class='col-md-4 header-logo'>
-          Jittery Joe's
-        </div>
-      </nav>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Link</a></li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Want 50% off?</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+  </header>
+    <div class="main-wrapper">
 
       <div class="option-content category_block"> 
         <img src="images/coffee_lovers.png">
@@ -53,8 +67,9 @@
     </div> <!-- close main wrapper -->
 
     <div class="reviewForm review-form-wrapper row">
-      <form name="review-form" ng-submit="submitReview()">
+      <form name="review-form" ng-submit="submitReview()" ng-hide="reviewSubmit">
         <div class="form-group">
+          <span>{{ myReview.item }}</span>
           <label ng-repeat="num in [1, 2, 3, 4, 5]">
             <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
             {{ num }}
@@ -63,7 +78,12 @@
           <button type='submit'>Submit</button>
         </div>
       </form>
-    </form>
+      <div class='password' ng-show="reviewSubmit">
+        <span>Your secret code is</span>
+        <span class='password'>W3t332gfdg</span>
+      </div>
+
+    </div>
 
     <!-- load things -->
     <!-- Angular CDN -->
