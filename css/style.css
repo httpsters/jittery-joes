@@ -11,7 +11,7 @@ h2 {
   font-variant: uppercase;
 }
 
-h3 {
+.item_title_block {
   color:#6b3515; 
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -24,14 +24,21 @@ h4 {
   font-size: 19px;
 }
 
-p {
-  padding-top: 70px;
+.desc {
   color: #6b3515;
   font-family: 'Open Sans', sans-serif;
-  font-size:16px;
+  font-size:14px;
   margin: auto;
 }
 
+.item_desc { 
+  padding-top: 20px; 
+  color: #6b3515;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size:14px;
+  margin: auto;
+}
 
 header {
   text-align: center;
