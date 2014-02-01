@@ -153,9 +153,26 @@ footer {
   margin: 10px 0 0 65px;
 }
 
-div.reviewForm {
+div.review-form {
   background: white
 }
+div.show-password {
+  text-align: center;
+}
+div.show-password img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%
+}
+div.show-password.msg-thank-you {
+  font-family: "Russo One", sans-serif;
+}
+div.show-password.msg-password {
+}
+div.show-password.msg-tip {
+}
+
+
 
 .mid_footer_content {
   width: 1070px;
