@@ -1,8 +1,8 @@
 .image {
 	width: 100%;
 	height: 100%;
-	max-width: 500px;
-	max-height: 500px;
+	max-width: 600px;
+	max-height: 600px;
 }
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
