@@ -1,4 +1,27 @@
 body {
+<<<<<<< HEAD
+  padding-top: 70px;
+  color: #6b3515;
+  font-family: 'Open Sans', sans-serif;
+  font-size:16px;
+  margin: auto;
+}
+
+h1{
+  color: #6B3515;
+  font-family: 'Russo', sans-serif;
+  font-size:64px;
+}
+h2 {
+  color:#C98F2B; 
+  font-family: 'Russo', sans-serif;
+  font-size:32px;
+}
+h3,
+h4,
+h5,
+h6,
+=======
   color: #6b3515;
   font-family: 'Open sans', sans-serif;
   font-size: 16px;
@@ -18,6 +41,7 @@ h2 {
   font-size: 32px;
   margin: auto;
 }
+>>>>>>> a0167312eed12da1e9c2cf4e43802895f85551b7
 
 
 

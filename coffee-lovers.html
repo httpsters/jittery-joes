@@ -67,7 +67,7 @@
     </div> <!-- close main wrapper -->
 
     <div class="reviewForm review-form-wrapper row">
-      <form name="review-form" ng-submit="submitReview()">
+      <form name="review-form" ng-submit="submitReview()" ng-hide="reviewSubmit">
         <div class="form-group">
           <span>{{ myReview.item }}</span>
           <label ng-repeat="num in [1, 2, 3, 4, 5]">
@@ -78,7 +78,12 @@
           <button type='submit'>Submit</button>
         </div>
       </form>
-    </form>
+      <div class='password' ng-show="reviewSubmit">
+        <span>Your secret code is</span>
+        <span class='password'>W3t332gfdg</span>
+      </div>
+
+    </div>
 
     <!-- load things -->
     <!-- Angular CDN -->
