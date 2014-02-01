@@ -5,12 +5,13 @@ h1{
   font-size:64px;
 }
 h2 {
-  color:#C98F2B; 
+   color: #6B3515;
   font-family: 'Russo One', sans-serif;
-  font-size: 32px;
+  font-size:64px;
+  font-variant: uppercase;
 }
 
-h3 {
+.item_title_block {
   color:#6b3515; 
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -23,14 +24,21 @@ h4 {
   font-size: 19px;
 }
 
-body {
-  padding-top: 70px;
+.desc {
   color: #6b3515;
   font-family: 'Open Sans', sans-serif;
-  font-size:16px;
+  font-size:14px;
   margin: auto;
 }
 
+.item_desc { 
+  padding-top: 20px; 
+  color: #6b3515;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size:14px;
+  margin: auto;
+}
 
 header {
   text-align: center;
