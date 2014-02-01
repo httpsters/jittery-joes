@@ -3,7 +3,7 @@
   <head>
     <title>Jittery Joe's</title>
   </head>
-  <body ng-controller="ReviewListCtrl">
+  <body ng-controller="CoffeeLoversCtrl">
     <header class="row">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="nav-inner">
@@ -24,17 +24,66 @@
     </header>
     <div class="main-wrapper">
 
-      <h1>Adventurers</h1>
-      <p>Travel the coffee world with Joe!</p>
+      <div class="option-content category_block"> 
+        <img src="images/adventurer.jpg">
+        <div class="categ_desc_block">
+          <h1>Adventurer's Blends</h1>
+          <p>Travel the coffee world with Joe.</p>
+        </div>
+      </div>
 
       <div class="coffee-detail-list">
-        <div class="coffee-item">
-          <h3>Fordlandia</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div class="coffee-item" ng-repeat="coffee in coffees">
+          <div class='option-content'>
+            <div class="item_title_block">
+              <h3 class='name'>{{ coffee }}</h3>
+              <div class="item_desc">Medium to Strong, a rich and complex coffee with a smooth finish.</div>
+            </div>
+            <!-- <div class="review_user">
+              <img src="images/person.jpg" />
+              <div class="review_user_name">Kate</div>
+            </div> -->
+            <div class='review' ng-repeat="review in getReviews(coffee)">
+              <img src="images/coffe_cups_review.png" />
+              <!-- <span class="review_stars">{{ review.rating }}/5</span> -->
+               <div class="review_text">{{ review.comment }}</div>
+            </div>
+            <a class="add_review" ng-click="addReview(coffee)">Add review</a>
+            <!-- <div class='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book.</div> -->
+            </div>            
         </div>
       </div>
 
     </div> <!-- close main wrapper -->
+
+    <div class="reviewForm review-form-wrapper row">
+      <form name="review-form" ng-submit="submitReview()" ng-hide="reviewSubmit">
+        <div class="form-group pop_up">
+          <div>{{ myReview.item }}</div>
+          <div><br />
+            <label ng-repeat="num in [1, 2, 3, 4, 5]">
+              <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
+              {{ num }}
+            </label>
+          </div><br />
+          <div>
+            <textarea ng-model="myReview.comment"></textarea>
+          </div><br />
+          <button type='submit'>Submit</button>
+        </div>
+      </form>
+    </div>
+      <div class='show-password'>
+        <img src="images/secretpassword.jpg">
+        <div class='msg-thank-you'>Thank you!</div>
+        <div class='msg-password'>W3t332gfdg</div>
+        <div class='msg-tip'>
+          Use this password for your next purchase at <b>Jittery Joe's</b>
+          to receive <b>50% off</b> your next cup o' joe!
+        </div>
+      </div>
 
     <!-- load things -->
     <!-- Angular CDN -->

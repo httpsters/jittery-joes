@@ -62,15 +62,16 @@
     <div class="reviewForm review-form-wrapper row">
       <form name="review-form" ng-submit="submitReview()" ng-hide="reviewSubmit">
         <div class="form-group pop_up">
-          <div>{{ myReview.item }}</div>
+          Blend you are reviewing:
+          <div><em>{{ myReview.item }}</em></div>
           <div><br />
-            <label ng-repeat="num in [1, 2, 3, 4, 5]">
+            Rating:&nbsp<label ng-repeat="num in [1, 2, 3, 4, 5]">
               <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
               {{ num }}
             </label>
           </div><br />
           <div>
-            <textarea ng-model="myReview.comment"></textarea>
+            Comments:<br><textarea ng-model="myReview.comment"></textarea>
           </div><br />
           <button type='submit'>Submit</button>
         </div>
