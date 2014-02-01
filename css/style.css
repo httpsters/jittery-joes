@@ -5,9 +5,10 @@ h1{
   font-size:64px;
 }
 h2 {
-  color:#C98F2B; 
+   color: #6B3515;
   font-family: 'Russo One', sans-serif;
-  font-size: 32px;
+  font-size:64px;
+  font-variant: uppercase;
 }
 
 h3 {
@@ -23,7 +24,7 @@ h4 {
   font-size: 19px;
 }
 
-body {
+p {
   padding-top: 70px;
   color: #6b3515;
   font-family: 'Open Sans', sans-serif;
@@ -58,6 +59,11 @@ header .slogan {
   padding-bottom: 0;
   margin: 0;
   float: none;
+}
+.navbar-brand {
+  padding: 0px;
+  height: 50px;
+  width: 200px;
 }
 
 .main-wrapper {
@@ -123,10 +129,15 @@ footer {
 .option-content .name {
   float: left;
   width: 220px;
+  font-size: 24pt;
+  font-weight: bold;
+  color: #ca9137;
 }
 .option-content .item_desc {
   float: left;
   width: 580px;
+  font-size: 12pt;
+  margin: 10px 0 0;
 }
 
 .review_user {
