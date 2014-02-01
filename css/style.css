@@ -115,3 +115,8 @@ footer {
 div.reviewForm {
   background: white
 }
+
+.mid_footer_content {
+  width: 1070px;
+  margin: 0 auto;
+}
