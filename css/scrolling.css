@@ -12,14 +12,11 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
-
-.container a {
-	color: #f0f0f0;
-	text-decoration: none;
+.container a:link, a:visited {
+	color: #453524;
 }
-
 .container a:hover {
-	color: #000;
+	color: #47a3da;
 }
 
 .container > header {
@@ -56,7 +53,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	font-size: 75%;
 	position: relative;
 }
-
+/*
 .container > header > span span:hover:before {
 	content: attr(data-content);
 	text-transform: none;
@@ -73,42 +70,10 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	color: #47a3da;
 	background: #fff;
 }
+*/
 
-.container > header nav {
-	float: right;
-	text-align: center;
-}
 
-.container > header nav a {
-	display: inline-block;
-	position: relative;
-	text-align: left;
-	width: 2.5em;
-	height: 2.5em;
-	background: #47a3da;
-	border-radius: 50%;
-	margin: 0 0.1em;
-	border: 4px solid #fff;
-}
 
-.container > header nav a > span {
-	display: none;
-}
-
-.container > header nav a:hover:before {
-	content: attr(data-info);
-	color: #fff;
-	position: absolute;
-	width: 600%;
-	top: 120%;
-	text-align: right;
-	right: 0;
-	pointer-events: none;
-}
-
-.container > header nav a:hover {
-	background: #fff;
-}
 
 .bp-icon:after {
 	font-family: 'bpicons';
@@ -130,10 +95,6 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	height: 100%;
 	line-height: 2;
 	text-indent: 0;
-}
-
-.container > header nav a:hover:after {
-	color: #47a3da;
 }
 
 .bp-icon-next:after {
