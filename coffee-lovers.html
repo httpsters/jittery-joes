@@ -52,11 +52,15 @@
 
     </div> <!-- close main wrapper -->
 
-    <form class="reviewForm">
-      <label ng-repeat="num in [1, 2, 3, 4, 5]">
-        <input ng-model="myReview.rating" type="radio" id="rating-{{ num }}" value="{{ num }}">
-        {{ num }}
-      </label>
+    <div class="reviewForm">
+      <form>
+        <label ng-repeat="num in [1, 2, 3, 4, 5]">
+          <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
+          {{ num }}
+        </label>
+        <textarea ng-model="myReview.comment">
+        </textarea>
+      </form>
     </form>
 
     <!-- load things -->
