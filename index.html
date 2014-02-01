@@ -13,26 +13,43 @@
         </div>
       </header>
 
-      <div class="coffee-option">
-        <div class="option-content">
-          <h2>Coffee lovers</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
+      <div class="container">
+      <div id="cbp-so-scroller" class="cbp-so-scroller">
+        <section class="cbp-so-section">
+          <article class="cbp-so-side cbp-so-side-left">
+            <h2>Coffee Lover</h2>
+            <p>You love coffee. JITTERY 24/7
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
+          </article>
+          <figure class="cbp-so-side cbp-so-side-right">
+            <img class="image" src="images/beans.jpg" alt="img01">
+          </figure>
+        </section>
+        <section class="cbp-so-section">
+          <figure class="cbp-so-side cbp-so-side-left">
+            <img class="image" src="images/travel_collage.jpg" alt="img01">
+          </figure>
+          <article class="cbp-so-side cbp-so-side-right">
+            <h2>Adventurer</h2>
+            <p>You love trying new blends and exploring the world through your brew.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
+          </article>
+        </section>
+        <section class="cbp-so-section">
+          <article class="cbp-so-side cbp-so-side-left">
+            <h2>Daily Deals</h2>
+            <p>You want a quality cup of Joe on a budget.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
+          </article>
+          <figure class="cbp-so-side cbp-so-side-right">
+            <img class="image" src="images/chalkboard.jpg" alt="img01">
+          </figure>
+        </section>
       </div>
-
-      <div class="coffee-option">
-        <div class=option-content>
-          <h2>Adventurers</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-      </div>
-
-      <div class="coffee-option">
-        <div class=option-content>
-          <h2>Today's Deals</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-      </div>
+    </div>
 
 
       <!-- footer -->
@@ -80,6 +97,15 @@
     </div> <!-- close main wrapper -->
 
     <!-- load things -->
+    <!-- fancy scroll animations -->
+    <script src="js/classie.js"></script>
+    <script src="js/cbpScroller.js"></script>
+    <script>
+      new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+    </script>
+    
+    <script src="js/modernizr.custom.js"></script>
+
     <!-- Angular CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
@@ -93,7 +119,9 @@
     <!-- custom JS -->
     <script src="js/app.js"></script>
 
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/scrolling.css" />
+    <link rel="stylesheet" type="text/css" href="css/scrollcomponent.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </body>
 </html>
