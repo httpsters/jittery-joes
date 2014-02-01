@@ -71,3 +71,14 @@ footer {
   border-top: 1px solid black;
   padding: 30px;
 }
+
+.category_block img {
+  display: inline-block;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.category_block .categ_desc_block {
+  display: inline-block;
+  width: 570px;
+}
