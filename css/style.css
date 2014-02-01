@@ -1,4 +1,5 @@
 body {
+  padding-top: 70px;
   color: #453524;
   font-family: 'Roboto Slab', sans-serif;
   margin: auto;
@@ -26,6 +27,17 @@ header h1 {
 }
 header .slogan {
 	font-size: 24px;
+}
+
+.nav-inner { text-align: center; }
+.container-fluid { background-color: #fff; }
+.nav-center { 
+  max-height: 0px;
+  overflow: visible;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  float: none;
 }
 
 .main-wrapper {

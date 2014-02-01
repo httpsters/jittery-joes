@@ -52,14 +52,16 @@
 
     </div> <!-- close main wrapper -->
 
-    <div class="reviewForm">
-      <form>
-        <label ng-repeat="num in [1, 2, 3, 4, 5]">
-          <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
-          {{ num }}
-        </label>
-        <textarea ng-model="myReview.comment">
-        </textarea>
+    <div class="reviewForm review-form-wrapper row">
+      <form name="review-form" ng-submit="submitReview()">
+        <div class="form-group">
+          <label ng-repeat="num in [1, 2, 3, 4, 5]">
+            <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
+            {{ num }}
+          </label>
+          <textarea ng-model="myReview.comment"></textarea>
+          <button type='submit'>Submit</button>
+        </div>
       </form>
     </form>
 
