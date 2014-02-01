@@ -74,6 +74,8 @@ jitteryApp.controller('ReviewListCtrl', function ($scope, $http) {
             $scope.myReview = {};
             $scope.reviewSubmit = true;
             console.log('submit success');
+            $('.reviewForm').trigger('closeModal');
+            $('.show-password').trigger('openModal');
         });
     }
 
@@ -173,4 +175,11 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
 
 });
 
-$('.reviewForm').easyModal();
+$('.reviewForm').easyModal({
+    overlayColor: "#FFF",
+    overlayOpacity: 0.9
+});
+$('.show-password').easyModal({
+    overlayColor: "#FFF",
+    overlayOpacity: 0.9
+});

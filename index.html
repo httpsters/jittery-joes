@@ -118,9 +118,9 @@
       </footer>
 
     <div class="reviewForm review-form-wrapper row">
-      <form name="review-form" ng-submit="submitReview()" ng-hide="reviewSubmit">
+      <form name="review-form" ng-submit="submitReview()">
         <div class="form-group">
-          <select ng-model="review.item" ng-options="coffee for coffee in coffees" name="review-item-field" id="review-item-field" class="review-item-field form-control">
+          <select ng-model="myReview.item" ng-options="coffee for coffee in coffees" name="review-item-field" id="review-item-field" class="review-item-field form-control">
           </select>
           <label ng-repeat="num in [1, 2, 3, 4, 5]">
             <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
@@ -130,14 +130,14 @@
           <button type='submit'>Submit</button>
         </div>
       </form>
-      <div class='show-password' ng-show="reviewSubmit">
-        <img src="images/secretpassword.jpg">
-        <div class='msg-thank-you'>Thank you!</div>
-        <div class='msg-password'>W3t332gfdg</div>
-        <div class='msg-tip'>
-          Use this password for your next purchase at <b>Jittery Joe's</b>
-          to receive <b>50% off</b> your next cup o' joe!
-        </div>
+    </div>
+    <div class='show-password'>
+      <img src="images/secretpassword.jpg">
+      <div class='msg-thank-you'>Thank you!</div>
+      <div class='msg-password'>W3t332gfdg</div>
+      <div class='msg-tip'>
+        Use this password for your next purchase at <b>Jittery Joe's</b>
+        to receive <b>50% off</b> your next cup o' joe!
       </div>
     </div>
 
