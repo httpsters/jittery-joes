@@ -8,6 +8,7 @@ h2 {
    color: #6B3515;
   font-family: 'Russo One', sans-serif;
   font-size:64px;
+  font-variant: uppercase;
 }
 
 h3 {
@@ -23,7 +24,7 @@ h4 {
   font-size: 19px;
 }
 
-body {
+p {
   padding-top: 70px;
   color: #6b3515;
   font-family: 'Open Sans', sans-serif;
