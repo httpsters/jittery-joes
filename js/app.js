@@ -65,6 +65,8 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
     // initialize reviews. will get updated with jsonp call
     $scope.reviews = [];
     
+    $scope.reviewSubmit = false;
+    
     $scope.coffees = [
         'Columbian',
         'Fordnation Blend',
@@ -122,6 +124,7 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
 
             // Reset form vars.
             $scope.myReview = {};
+            $scope.reviewSubmit = true;
             console.log('submit success');
         });
     }
