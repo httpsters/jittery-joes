@@ -41,6 +41,13 @@
 
     </div> <!-- close main wrapper -->
 
+    <form class="reviewForm">
+      <label ng-repeat="num in [1, 2, 3, 4, 5]">
+        <input ng-model="myReview.rating" type="radio" id="rating-{{ num }}" value="{{ num }}">
+        {{ num }}
+      </label>
+    </form>
+
     <!-- load things -->
     <!-- Angular CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>

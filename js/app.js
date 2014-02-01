@@ -120,7 +120,12 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
     };
 
     $scope.addReview = function(coffee) {
-        console.log('adding review', coffee);
+        var myReview = $scope.myReview;
+        console.log('my review', myReview);
+
+        $('.reviewForm').trigger('openModal');
     };
 
 });
+
+$('.reviewForm').easyModal();
