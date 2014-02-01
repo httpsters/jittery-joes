@@ -127,15 +127,15 @@ footer {
 }
 
 .option-content .name {
-  float: left;
   width: 220px;
   font-size: 24pt;
   font-weight: bold;
   color: #ca9137;
+  display: inline-block;
 }
 .option-content .item_desc {
-  float: left;
-  width: 580px;
+  display: inline-block;
+  width: 575px;
   font-size: 12pt;
   margin: 10px 0 0;
 }
@@ -173,8 +173,6 @@ div.show-password.msg-password {
 }
 div.show-password.msg-tip {
 }
-
-
 
 .mid_footer_content {
   width: 1070px;
