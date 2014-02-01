@@ -53,14 +53,14 @@
               <div class="review_user_name">Kate</div>
             </div> -->
             <div class='review' ng-repeat="review in getReviews(coffee)">
-              <img src="image/coffe_cups_review.jpg" />
+              <img src="images/coffe_cups_review.png" />
               <!-- <span class="review_stars">{{ review.rating }}/5</span> -->
-               <span>{{ review.comment }}</span>
+               <div class="review_text">{{ review.comment }}</div>
             </div>
-            <a ng-click="addReview(coffee)">Add review</a>
-            <div class='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <a class="add_review" ng-click="addReview(coffee)">Add review</a>
+            <!-- <div class='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book.</div>
+            printer took a galley of type and scrambled it to make a type specimen book.</div> -->
             </div>            
         </div>
       </div>
