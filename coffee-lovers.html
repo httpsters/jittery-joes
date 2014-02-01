@@ -64,7 +64,7 @@
     </div> <!-- close main wrapper -->
 
     <div class="reviewForm review-form-wrapper row">
-      <form name="review-form" ng-submit="submitReview()" ng-show="reviewSubmit">
+      <form name="review-form" ng-submit="submitReview()" ng-hide="reviewSubmit">
         <div class="form-group">
           <span>{{ myReview.item }}</span>
           <label ng-repeat="num in [1, 2, 3, 4, 5]">
@@ -75,7 +75,7 @@
           <button type='submit'>Submit</button>
         </div>
       </form>
-      <div class='show-password' ng-hide="reviewSubmit">
+      <div class='show-password' ng-show="reviewSubmit">
         <img src="images/secretpassword.jpg">
         <div class='msg-thank-you'>Thank you!</div>
         <div class='msg-password'>W3t332gfdg</div>
