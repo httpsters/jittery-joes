@@ -3,7 +3,7 @@
   <head>
     <title>Jittery Joe's</title>
   </head>
-  <body ng-controller="ReviewListCtrl">
+  <body ng-controller="CoffeeLoversCtrl">
     <div class="main-wrapper">
       <nav class="navbar navbar-default">
         <ul class="nav navbar-nav navbar-right">
@@ -22,12 +22,14 @@
       </div>
 
       <div class="coffee-detail-list">
-        <div class="coffee-item" ng-repeat="num in [1,2,3,4,5]">
+        <div class="coffee-item" ng-repeat="coffee in coffees">
           <div class='option-content'>
-          <h3>Fordlandia</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h3 class='name'>{{ coffee }}</h3>
+            <div class='review'>Review</div>
+            <div class='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book.</div>
         </div>
-      </div>
       </div>
 
     </div> <!-- close main wrapper -->

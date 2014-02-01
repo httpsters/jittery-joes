@@ -91,3 +91,12 @@ jitteryApp.controller('ReviewListCtrl', function ($scope, $http) {
         });
     }
 });
+
+jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
+    
+    $scope.coffees = [
+        'Columbian',
+        'Coffee Lover Blend'
+    ]
+
+});
