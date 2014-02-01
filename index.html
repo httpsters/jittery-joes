@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html ng-app="jitteryApp">
   <head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
     <title>Jittery Joe's</title>
+    <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
   </head>
   <body ng-controller="ReviewListCtrl">
     <header class="row">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="nav-inner">
           <div class="nav-center">
-            <img src="images/nav-logo.png" />
+            <img src="images/logo.svg" />
           </div>
         </div>
         <div class="container-fluid">
           <a href="index.html"><img class="navbar-brand" src="images/logo_NAV.svg"/></a>
           
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
-            
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Want 50% off?</a></li>
+              <li><a ng-click="addReview()">Write a review for 50% off!</a></li>
             </ul>
-          </div><!-- /.navbar-collapse -->
-          
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </nav>
     </header>
 <div class="container">
@@ -119,6 +117,30 @@
       </div>
       </footer>
 
+    <div class="reviewForm review-form-wrapper row">
+      <form name="review-form" ng-submit="submitReview()">
+        <div class="form-group">
+          <select ng-model="myReview.item" ng-options="coffee for coffee in coffees" name="review-item-field" id="review-item-field" class="review-item-field form-control">
+          </select>
+          <label ng-repeat="num in [1, 2, 3, 4, 5]">
+            <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
+            {{ num }}
+          </label>
+          <textarea ng-model="myReview.comment"></textarea>
+          <button type='submit'>Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class='show-password'>
+      <img src="images/secretpassword.jpg">
+      <div class='msg-thank-you'>Thank you!</div>
+      <div class='msg-password'>W3t332gfdg</div>
+      <div class='msg-tip'>
+        Use this password for your next purchase at <b>Jittery Joe's</b>
+        to receive <b>50% off</b> your next cup o' joe!
+      </div>
+    </div>
+
     <!-- load things -->
     <!-- fancy scroll animations -->
     <script src="js/modernizr.custom.js"></script>
@@ -132,7 +154,9 @@
 
     <!-- Angular CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyModal.js"></script> 
+
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />

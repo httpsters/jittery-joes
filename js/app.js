@@ -35,6 +35,50 @@ jitteryApp.controller('ReviewListCtrl', function ($scope, $http) {
         });
     });
 
+    $scope.reviewSubmit = false;
+
+    $scope.addReview = function() {
+        console.log('hi');
+        // initialize review to be empty
+        $scope.myReview = {};
+        $('.reviewForm').trigger('openModal');
+    };
+
+    $scope.submitReview = function() {
+        // Get the form data from the scope.
+        var review = $scope.myReview;
+
+        // Prepare the data.
+        var nodeData = {
+            'type': 'review',
+            'field_review_comment': {'und': [{'value': review.comment} ]},
+            'field_review_rating': {'und': [{'value': review.rating} ]},
+            'field_review_item': {'und': {'value': review.item}},
+            'field_origin_app': {'und': [{'value': 'httpsters'}]}
+        };
+
+        // POST the data and create a node.
+        $http({url: 'http://jitteryjoes.myplanetfellowship.com/api/node.json', method: 'POST', data: nodeData})
+        .success(function(data, status) {
+            // Setup data object.
+            var review = $scope.myReview;
+            // Add our app id and date in seconds.
+            review.app = 'httpsters';
+            var d = new Date();
+            review.node_created = (d.getTime() / 1000);
+
+            // Add the review to the reviews array.
+            $scope.reviews.unshift (review);
+
+            // Reset form vars.
+            $scope.myReview = {};
+            $scope.reviewSubmit = true;
+            console.log('submit success');
+            $('.reviewForm').trigger('closeModal');
+            $('.show-password').trigger('openModal');
+        });
+    }
+
     // Set our "signupSent" flag to false by default.
     $scope.signupSent = false;
 
@@ -69,8 +113,12 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
     
     $scope.coffees = [
         'Columbian',
-        'Fordnation Blend',
-        'Coffee Lover Blend'
+         'Mocca-Java',
+        'Reggae Blend',
+        'Ruth Roast',
+        'Toronto Blend',
+        'Tropic of Coffee',
+        'Fordnation Blend'
     ]
 
     $http.jsonp('http://jitteryjoes.myplanetfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
@@ -86,7 +134,7 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
             return review.item === blendName;
         });
 
-        return filtered;
+        return filtered.slice(0,5);
     };
 
     $scope.addReview = function(coffee) {
@@ -126,9 +174,18 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
             $scope.myReview = {};
             $scope.reviewSubmit = true;
             console.log('submit success');
+            $('.reviewForm').trigger('closeModal');
+            $('.show-password').trigger('openModal');
         });
     }
 
 });
 
-$('.reviewForm').easyModal();
+$('.reviewForm').easyModal({
+    overlayColor: "#FFF",
+    overlayOpacity: 0.9
+});
+$('.show-password').easyModal({
+    overlayColor: "#FFF",
+    overlayOpacity: 0.9
+});
