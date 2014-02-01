@@ -121,7 +121,8 @@
     <div class="reviewForm review-form-wrapper row">
       <form name="review-form" ng-submit="submitReview()" ng-hide="reviewSubmit">
         <div class="form-group">
-          <span>{{ myReview.item }}</span>
+          <select ng-model="review.item" ng-options="coffee for coffee in coffees" name="review-item-field" id="review-item-field" class="review-item-field form-control">
+          </select>
           <label ng-repeat="num in [1, 2, 3, 4, 5]">
             <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
             {{ num }}
