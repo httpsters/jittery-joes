@@ -74,6 +74,8 @@ jitteryApp.controller('ReviewListCtrl', function ($scope, $http) {
             $scope.myReview = {};
             $scope.reviewSubmit = true;
             console.log('submit success');
+            $('.reviewForm').trigger('closeModal');
+            $('.show-password').trigger('openModal');
         });
     }
 
@@ -111,8 +113,12 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
     
     $scope.coffees = [
         'Columbian',
-        'Fordnation Blend',
-        'Coffee Lover Blend'
+         'Mocca-Java',
+        'Reggae Blend',
+        'Ruth Roast',
+        'Toronto Blend',
+        'Tropic of Coffee',
+        'Fordnation Blend'
     ]
 
     $http.jsonp('http://jitteryjoes.myplanetfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
@@ -173,4 +179,11 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
 
 });
 
-$('.reviewForm').easyModal();
+$('.reviewForm').easyModal({
+    overlayColor: "#FFF",
+    overlayOpacity: 0.9
+});
+$('.show-password').easyModal({
+    overlayColor: "#FFF",
+    overlayOpacity: 0.9
+});
