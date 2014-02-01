@@ -185,3 +185,27 @@ div.show-password.msg-tip {
   width: 1070px;
   margin: 0 auto;
 }
+
+.review_text {
+  margin-bottom: 10px;
+}
+
+.add_review {
+  background: #e9cf91;
+  padding: 10px 15px;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.add_review:hover {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.form-group {
+  background: #fff;
+  padding: 20px;              
+  border-radius: 10px;    
+}
