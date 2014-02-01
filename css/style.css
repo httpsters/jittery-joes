@@ -59,6 +59,11 @@ header .slogan {
   margin: 0;
   float: none;
 }
+.navbar-brand {
+  padding: 0px;
+  height: 50px;
+  width: 200px;
+}
 
 .main-wrapper {
   margin: auto;
