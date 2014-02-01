@@ -93,10 +93,30 @@ jitteryApp.controller('ReviewListCtrl', function ($scope, $http) {
 });
 
 jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
+
+    // initialize reviews. will get updated with jsonp call
+    $scope.reviews = [];
     
     $scope.coffees = [
         'Columbian',
+        'Fordnation Blend',
         'Coffee Lover Blend'
     ]
+
+    $http.jsonp('http://jitteryjoes.myplanetfellowship.com/api/ratings.jsonp?callback=JSON_CALLBACK').
+    success(function(data, status) {
+        $scope.reviews = data;
+    });
+
+    // get reviews for a specific blend
+    $scope.getReviews = function(blendName) {
+        reviews = $scope.reviews;
+
+        filtered = reviews.filter(function(review) {
+            return review.item === blendName;
+        });
+
+        return filtered;
+    };
 
 });
