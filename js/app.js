@@ -174,6 +174,8 @@ jitteryApp.controller('CoffeeLoversCtrl', function($scope, $http) {
             $scope.myReview = {};
             $scope.reviewSubmit = true;
             console.log('submit success');
+            $('.reviewForm').trigger('closeModal');
+            $('.show-password').trigger('openModal');
         });
     }
 
