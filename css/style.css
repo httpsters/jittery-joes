@@ -82,3 +82,17 @@ footer {
   display: inline-block;
   width: 570px;
 }
+
+.option-content .item_title_block {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.option-content .name {
+  float: left;
+  width: 220px;
+}
+.option-content .item_desc {
+  float: left;
+  width: 580px;
+}

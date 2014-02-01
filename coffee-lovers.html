@@ -28,13 +28,17 @@
       <div class="coffee-detail-list">
         <div class="coffee-item" ng-repeat="coffee in coffees">
           <div class='option-content'>
-            <h3 class='name'>{{ coffee }}</h3>
+            <div class="item_title_block">
+              <h3 class='name'>{{ coffee }}</h3>
+              <div class="item_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book.
+              </div>
+            </div>
+            <div class="review_user_name">Kate</div>
             <div class='review' ng-repeat="review in getReviews(coffee)">
               {{ review.rating }}/5 : {{ review.comment }}
-            </div>
-            <div class='desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book.</div>
+            </div>            
         </div>
       </div>
 
