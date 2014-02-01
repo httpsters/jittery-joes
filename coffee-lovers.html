@@ -55,6 +55,7 @@
     <div class="reviewForm review-form-wrapper row">
       <form name="review-form" ng-submit="submitReview()">
         <div class="form-group">
+          <span>{{ myReview.item }}</span>
           <label ng-repeat="num in [1, 2, 3, 4, 5]">
             <input ng-model="myReview.rating" type="radio" name="rating-value" id="rating-{{ num }}" value="{{ num }}">
             {{ num }}
