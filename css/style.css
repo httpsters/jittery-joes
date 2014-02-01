@@ -132,10 +132,15 @@ footer {
 .option-content .name {
   float: left;
   width: 220px;
+  font-size: 24pt;
+  font-weight: bold;
+  color: #ca9137;
 }
 .option-content .item_desc {
   float: left;
   width: 580px;
+  font-size: 12pt;
+  margin: 10px 0 0;
 }
 
 .review_user {
